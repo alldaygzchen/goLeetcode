@@ -5,10 +5,11 @@ import (
 	"testing"
 )
 
-func TestExampleFunction(t *testing.T) {
-    input := []int{1, 2, 3}
-    expected := 1
-    result := two_pointer.ExampleFunction(input)
+
+func Test_Problem42(t *testing.T) {
+    input := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
+    expected := 6
+    result := two_pointer.Trap(input)
     if result == expected {
         t.Logf("Success: Expected %d and got %d", expected, result)
     } else {
