@@ -1,40 +1,32 @@
-package sliding_windowfunc
+package sliding_window
 
-func maxSlidingWindow(nums []int, k int) []int {
-    if len(nums) == 0 || k == 0 {
-        return []int{}
-    }
+// time exceed
+// func maxSlidingWindow(nums []int, k int) []int {
+// 	l:=0
+// 	r:=0
+// 	currMax := math.MinInt
+// 	result := []int{}
 
-    result := make([]int, 0, len(nums)-k+1)
-    left, right := 0, 0
-    maxIndex := 0
+// 	for r <len(nums){
 
-    for right < len(nums) {
-        // Expand the window
-        if right-left+1 <= k {
-            if nums[right] >= nums[maxIndex] {
-                maxIndex = right
-            }
-            right++
-        }
+//         if nums[r]>=currMax{
+// 				currMax = nums[r]
+// 		}
 
-        // Window is full, process it
-        if right-left == k {
-            result = append(result, nums[maxIndex])
+// 		if r-l+1==k{
+//             result = append(result, currMax)
+//             if nums[l]==currMax{
+//                 currMax = math.MinInt
+//                 for i:=l+1; i<r+1;i++{
+//                     if nums[i]>=currMax{
+//                         currMax = nums[i]
+//                     }
+//                 }
 
-            // If the maximum is leaving the window, find the new maximum
-            if maxIndex == left {
-                maxIndex = left + 1
-                for i := left + 1; i < right; i++ {
-                    if nums[i] >= nums[maxIndex] {
-                        maxIndex = i
-                    }
-                }
-            }
-
-            left++
-        }
-    }
-
-    return result
-}
+//             }
+//             l++
+// 		}
+// 		r++
+// 	}
+// 	return result
+// }
