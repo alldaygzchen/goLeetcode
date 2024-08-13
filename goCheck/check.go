@@ -1,4 +1,4 @@
-package gointro
+package gocheck
 
 import "fmt"
 
