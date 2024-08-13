@@ -1,6 +1,8 @@
 package sliding_window
 
-import "math"
+import (
+	"math"
+)
 
 /*
 s = "ADOBECODEBANC", t = "ABC"
@@ -52,6 +54,7 @@ func MinWindow(s string, t string) string {
 			l++
 		}
 		r++
+		// fmt.Println(s[l:r+1])
 	}
 	return output
 }
