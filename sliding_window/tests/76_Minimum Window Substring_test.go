@@ -6,11 +6,11 @@ import (
 )
 
 
-func Test_checkInclusion(t *testing.T) {
-    input1 :="ab"
-	input2 :="eidbaooo"
-    expected := true
-    result := sliding_window.CheckInclusion(input1,input2)
+func Test_minWindow(t *testing.T) {
+    input1 :="ADOBECODEBANC"
+	input2 :="ABC"
+    expected := "BANC"
+    result := sliding_window.MinWindow(input1,input2)
     if result == expected {
         t.Logf("Success: Expected %v and got %v", expected, result)
     } else {
