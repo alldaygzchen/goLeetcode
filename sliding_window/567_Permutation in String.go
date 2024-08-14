@@ -55,10 +55,13 @@ func CheckInclusion(s1 string, s2 string) bool {
 			s2Count[s2[l]]--
 			l++
 		}
-        r++
+        // fmt.Println(s2[l:r+1])
 		if have == need {
             return true
         }
+		// next loop
+		r++
+		
 
 	}
 	return false

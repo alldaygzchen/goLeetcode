@@ -53,8 +53,9 @@ func MinWindow(s string, t string) string {
 			}
 			l++
 		}
-		r++
 		// fmt.Println(s[l:r+1])
+		// next loop
+		r++
 	}
 	return output
 }
