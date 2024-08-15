@@ -12,14 +12,14 @@ AD
 ADO
 ADOB
 ADOBE
-DOBEC
+ADOBEC=>DOBEC
 DOBECO
 DOBECOD
 DOBECODE
 DOBECODEB
-ODEBA
+DOBECODEBA=>ODEBA
 ODEBAN
-ANC
+ODEBANC=>ANC
 */
 
 func MinWindow(s string, t string) string {
@@ -37,6 +37,7 @@ func MinWindow(s string, t string) string {
 	need := len(countT)
 
 	for r<len(s){
+
 		countS[s[r]]++
 		if count,exist:=countT[s[r]];exist && count == countS[s[r]]{
 			have++
@@ -47,6 +48,7 @@ func MinWindow(s string, t string) string {
 				minLength = r-l+1
 				output = s[l:r+1]
 			}
+			
 			countS[s[l]]--
 			if count,exist:=countT[s[l]];exist && count == countS[s[l]]+1{
 				have--
@@ -54,7 +56,6 @@ func MinWindow(s string, t string) string {
 			l++
 		}
 		// fmt.Println(s[l:r+1])
-		// next loop
 		r++
 	}
 	return output

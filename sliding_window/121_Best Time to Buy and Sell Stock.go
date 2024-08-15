@@ -32,7 +32,6 @@ func MaxProfit(prices []int) int {
 			}
 		}
 		
-		// next loop
 		r++
 	}
 	return profixMax

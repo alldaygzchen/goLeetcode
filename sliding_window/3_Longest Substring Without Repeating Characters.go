@@ -10,11 +10,11 @@ Output: 3
 a
 ab
 abc
-bca
-cab
-abc
-cb
-b
+abca=>bca
+bcab=>cab
+cabc=>abc
+abcb=>cb
+cbb=>b
 
 */
 
@@ -30,6 +30,7 @@ func LengthOfLongestSubstring(s string) int {
 	}
 
 	for r<len(s){
+
 		countChar[s[r]]++
 
 		for countChar[s[r]]>1{
@@ -41,7 +42,6 @@ func LengthOfLongestSubstring(s string) int {
 			maxLength = r-l+1
 		}
 
-		// next loop
 		r++
 	}
 	return maxLength

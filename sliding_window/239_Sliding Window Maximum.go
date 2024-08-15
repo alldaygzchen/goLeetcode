@@ -15,7 +15,7 @@ Output: [3,3,5,5,6,7]
 
 */
 
-func maxSlidingWindow(nums []int, k int) []int {
+func MaxSlidingWindow(nums []int, k int) []int {
 	queue:=make([]int,0)
 	result:=make([]int,0)
 	l:=0
@@ -35,8 +35,8 @@ func maxSlidingWindow(nums []int, k int) []int {
             result = append(result,queue[0])
             if nums[l] == queue[0]{
 			    queue=queue[1:]
-			    l++
 		    }
+			l++
         }
 		r++
 
